@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="Main.css">
+</head>
+<body style="background-color: black;">
+    <div id="Frame1">   
+        <div class="Title1">Tic Tac Toe</div>
+        <div class="container"> 
+            <div class="box", onclick=Page2()><p>Normal</p></div>
+            <div class="box", onclick=Page3()><p>Super</p></div>
+        </div>
+    </div>
+    <div id="Frame2">
+        <div class = "Flex1">
+            <div class="Title2", onclick=Page1_2()>Tic Tac Toe</div>
+            <div class = "cover"></div> 
+        </div>
+        <div class = "FlexBoard">
+            <div  class="board1">
+                <div class="cell normalcell cellborderbottom cellborderright", onclick=normalInsert(0) ></div>
+                <div class="cell normalcell cellborderbottom cellborderright cellborderleft", onclick=normalInsert(1) ></div>
+                <div class="cell normalcell cellborderbottom cellborderleft", onclick=normalInsert(2) ></div>
+                <div class="cell normalcell cellborderbottom cellbordertop cellborderright", onclick=normalInsert(3) ></div>
+                <div class="cell normalcell cellborderbottom cellbordertop cellborderright cellborderleft", onclick=normalInsert(4) ></div>
+                <div class="cell normalcell cellborderbottom cellbordertop cellborderleft", onclick=normalInsert(5) ></div>
+                <div class="cell normalcell cellbordertop cellborderright", onclick=normalInsert(6)></div>
+                <div class="cell normalcell cellbordertop cellborderright cellborderleft", onclick=normalInsert(7) ></div>
+                <div class="cell normalcell cellbordertop cellborderleft", onclick=normalInsert(8) ></div>
+            </div>
+            <div class="boardcover" , onclick=NormalBoardReset() ></div>
+        </div>
+    </div>
+    <div id="Frame3">
+        <div class = "Flex1">
+            <div class="Title2", onclick=Page1_3()>Tic Tac Toe</div>
+            <div class = "cover"></div> 
+        </div>
+        <div class = "FlexBoard">
+            <div  class="board1">
+                <div class="cell  cellborderbottom cellborderright">
+                    <div class = "FlexBoardsmall">
+                        <div  class="boardsmall">
+                            <div onclick=superInsert(0); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(1); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(2); class="cellsmall supercell cellborderbottomsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(3); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(4); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(5); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(6); class="cellsmall supercell cellbordertopsmall cellborderrightsmall"></div>
+                            <div onclick=superInsert(7); class="cellsmall supercell cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(8); class="cellsmall supercell cellbordertopsmall cellborderleftsmall " ></div>
+                        </div>
+                        <div class="boardcoversmall" ></div>
+                    </div>
+                </div>
+                <div class="cell  cellborderbottom cellborderright cellborderleft">
+                    <div class = "FlexBoardsmall">
+                        <div  class="boardsmall">
+                            <div onclick=superInsert(9); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(10); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(11); class="cellsmall supercell cellborderbottomsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(12); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(13); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(14); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(15); class="cellsmall supercell cellbordertopsmall cellborderrightsmall"></div>
+                            <div onclick=superInsert(16); class="cellsmall supercell cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(17); class="cellsmall supercell cellbordertopsmall cellborderleftsmall " ></div>
+                        </div>
+                        <div class="boardcoversmall"></div>
+                    </div>
+                </div>
+                <div class="cell  cellborderbottom cellborderleft">
+                    <div class = "FlexBoardsmall">
+                        <div  class="boardsmall">
+                            <div onclick=superInsert(18); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(19); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(20); class="cellsmall supercell cellborderbottomsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(21); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(22); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(23); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(24); class="cellsmall supercell cellbordertopsmall cellborderrightsmall"></div>
+                            <div onclick=superInsert(25); class="cellsmall supercell cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(26); class="cellsmall supercell cellbordertopsmall cellborderleftsmall " ></div>
+                        </div>
+                        <div class="boardcoversmall"></div>
+                    </div>
+                </div>
+                <div class="cell  cellborderbottom cellbordertop cellborderright">
+                    <div class = "FlexBoardsmall">
+                        <div  class="boardsmall">
+                            <div onclick=superInsert(27); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(28); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(29); class="cellsmall supercell cellborderbottomsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(30); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(31); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(32); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(33); class="cellsmall supercell cellbordertopsmall cellborderrightsmall"></div>
+                            <div onclick=superInsert(34); class="cellsmall supercell cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(35); class="cellsmall supercell cellbordertopsmall cellborderleftsmall " ></div>
+                        </div>
+                        <div class="boardcoversmall" ></div>
+                    </div>
+                </div>
+                <div class="cell  cellborderbottom cellbordertop cellborderright cellborderleft">
+                    <div class = "FlexBoardsmall">
+                        <div  class="boardsmall">
+                            <div onclick=superInsert(36); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(37); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(38); class="cellsmall supercell cellborderbottomsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(39); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(40); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(41); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(42); class="cellsmall supercell cellbordertopsmall cellborderrightsmall"></div>
+                            <div onclick=superInsert(43); class="cellsmall supercell cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(44); class="cellsmall supercell cellbordertopsmall cellborderleftsmall " ></div>
+                        </div>
+                        <div class="boardcoversmall"></div>
+                    </div>
+                </div>
+                <div class="cell  cellborderbottom cellbordertop cellborderleft">
+                    <div class = "FlexBoardsmall">
+                        <div  class="boardsmall">
+                            <div onclick=superInsert(45); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(46); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(47); class="cellsmall supercell cellborderbottomsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(48); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(49); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(50); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(51); class="cellsmall supercell cellbordertopsmall cellborderrightsmall"></div>
+                            <div onclick=superInsert(52); class="cellsmall supercell cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(53); class="cellsmall supercell cellbordertopsmall cellborderleftsmall " ></div>
+                        </div>
+                        <div class="boardcoversmall"></div>
+                    </div>
+                </div>
+                <div class="cell  cellbordertop cellborderright">
+                    <div class = "FlexBoardsmall">
+                        <div  class="boardsmall">
+                            <div onclick=superInsert(54); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(55); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(56); class="cellsmall supercell cellborderbottomsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(57); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(58); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(59); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(60); class="cellsmall supercell cellbordertopsmall cellborderrightsmall"></div>
+                            <div onclick=superInsert(61); class="cellsmall supercell cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(62); class="cellsmall supercell cellbordertopsmall cellborderleftsmall " ></div>
+                        </div>
+                        <div class="boardcoversmall"></div>
+                    </div>
+                </div>
+                <div class="cell  cellbordertop cellborderright cellborderleft">
+                    <div class = "FlexBoardsmall">
+                        <div  class="boardsmall">
+                            <div onclick=superInsert(63); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(64); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(65); class="cellsmall supercell cellborderbottomsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(66); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(67); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(68); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(69); class="cellsmall supercell cellbordertopsmall cellborderrightsmall"></div>
+                            <div onclick=superInsert(70); class="cellsmall supercell cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(71); class="cellsmall supercell cellbordertopsmall cellborderleftsmall " ></div>
+                        </div>
+                        <div class="boardcoversmall"></div>
+                    </div>
+                </div>
+                <div class="cell  cellbordertop cellborderleft">
+                    <div class = "FlexBoardsmall">
+                        <div  class="boardsmall">
+                            <div onclick=superInsert(72); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(73); class="cellsmall supercell cellborderbottomsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(74); class="cellsmall supercell cellborderbottomsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(75); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall" ></div>
+                            <div onclick=superInsert(76); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(77); class="cellsmall supercell cellborderbottomsmall cellbordertopsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(78); class="cellsmall supercell cellbordertopsmall cellborderrightsmall"></div>
+                            <div onclick=superInsert(79); class="cellsmall supercell cellbordertopsmall cellborderrightsmall cellborderleftsmall" ></div>
+                            <div onclick=superInsert(80); class="cellsmall supercell cellbordertopsmall cellborderleftsmall " ></div>
+                        </div>
+                        <div class="boardcoversmall"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="boardcover", onclick=superBoardReset()></div>
+        </div>
+    </div>
+    <script src="Main.js"></script>
+</body>
+
+</html>     

@@ -1,0 +1,348 @@
+/* #Frame1 {
+    display: none;
+} */
+
+/* To DO
+
+TiTle responsive
+    remove padding -- 
+    text size var--
+    margin bottom var--
+    cover add margin top bottom--
+    cover var left movment
+    cover var size depending text--
+
+    flex1 left var 
+*/
+:root{
+    --boardsize : 400px;
+    --boardsizesmall : 100px;
+    --bordercolor : #ffde4e; 
+    --bordercolorsmall : #3fffaf; 
+    /* #ffde4e #3fffaf */
+    --maxmargintitleY : 55px;
+    --maxmargintitleX : 95px;
+    --minmargintitleY : 32px;
+    --minmargintitleX : 95px;
+
+    --MaxTitleTextSize : 100px;
+    --MinTitleTextSize : 80px;
+
+    --TitleCoverInitail : 400px;
+    --TitleCoverNormal: 700px;
+    --TitleCoverSuper: 630px;
+
+    --padding : 100px;
+    
+}
+
+.Title1 {    
+    color: #e9fff2;
+    font-size: var(--MaxTitleTextSize);
+    position: relative;
+    /* padding: 2px 30px; */
+    margin: var(--maxmargintitleY) var(--maxmargintitleX) ;
+    /* margin-top: 23px;
+    margin-bottom: 30px; */
+    animation-name: SlideIn;
+    animation-duration: 0.7s;   
+    animation-timing-function: ease-out;
+    transition-duration: 2s;
+
+    /* border: red solid; */
+    /* display: inline; */
+}
+.container {
+    position: relative;
+    display: flex;
+    /* flex: 1 1 auto; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;;
+    height: calc(100vh * .35);
+    
+    
+    /* border: red solid; */
+}
+
+.box {
+    position: relative;
+    width: 40%;
+    height: 80%;
+    font-size: 60px;
+    background-color: rgb(26, 25, 25);
+    padding: 20px 20px;
+    margin: 20px 20px;
+    /* margin-top: 70px; */
+    transition-duration: 1s;
+    border-radius: 3%;
+    color: white;
+    border: rgb(25, 25, 25)solid;
+    /* border: red solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.box:hover {
+    transform: scale(1.05);
+    border: rgb(40, 41, 49) solid;
+    font-size: 63px;
+}
+/* ---------------- Frame2 -------------------- */
+#Frame2 {
+    display: none;
+}
+
+.Flex1 {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.FlexBoard {
+    display: flex;
+    height: calc(var(--boardsize) + var(--boardsize)*7/50);
+    width: calc(var(--boardsize) + var(--boardsize)*7/50);
+    align-items: center;
+    justify-content: center;
+    /* background-color: #ffde4e; */
+}
+
+
+.Title2 {    
+    color: #e9fff2;
+    font-size: var(--MinTitleTextSize);
+    position: initial;
+    /* padding: 2px 30px; */
+    margin: var(--maxmargintitleY) 0px ;
+    /* margin-bottom: 70px; */
+    /* background-color: yellow; */
+    animation-name: TitleMini;
+    animation-duration: 0.7s;   
+    animation-timing-function: ease-out;
+    transition-duration: 1s;
+    /* border: red solid; */
+    /* display: inline; */
+}
+
+
+
+.cover{
+    position:absolute;
+    background-color: #000000;
+    width: calc(var(--MaxTitleTextSize)*6);
+    height: var(--MaxTitleTextSize);
+    font-size: var(--MinTitleTextSize);
+    left : var(--TitleCoverInitail);
+    margin-top: var(--minmargintitleY);
+    margin-bottom: var(--maxmargintitleY);
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-left-color:  #ffde4e;
+    display: none;
+}
+
+
+.board1 {
+    display: grid;
+    /* position:absolute; */
+    grid-template-columns: auto auto auto;
+    /* height: var(--boardsize) ;
+    width: var(--boardsize) ;
+    left: calc(var(--boardsize)/50); */
+    justify-content: center;
+    align-items: center;
+    /* height: 500px;
+    width: 500px; */
+}
+
+
+
+.cell{
+    display: flex;
+    height: calc(.33*var(--boardsize));
+    width: calc(.33*var(--boardsize));
+    background-color: rgb(0, 0, 0);
+    /* padding: 0.05*var(--boardsize) 0.05*var(--boardsize); */
+    /* margin: 0.05*var(--boardsize) 0.05*var(--boardsize); */
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    /* text-align: center;
+    vertical-align: center; */
+    border: 8px solid black;
+    color: #000000;
+    font-size: calc(.2*var(--boardsize));
+    transition-duration: 1s;
+}
+
+.cellborderleft{border-left: calc(var(--boardsize)/50) solid var(--bordercolor);}
+.cellborderright{border-right: calc(var(--boardsize)/50) solid var(--bordercolor);}
+.cellbordertop{border-top: calc(var(--boardsize)/50) solid var(--bordercolor);}
+.cellborderbottom{border-bottom: calc(var(--boardsize)/50) solid var(--bordercolor);}
+
+/* #Frame2 .board1{
+    left: 115px;
+    margin: 24px 24px;
+} */
+
+.boardcover {
+    display: flex;
+    position: absolute;
+    height: calc(var(--boardsize) + var(--boardsize)*7/50);
+    width: calc(var(--boardsize) + var(--boardsize)*7/50);
+    background-color: #000000;
+    opacity: 1;
+    /* top: calc(var(--boardsize)*2.5/50); */
+    font-size:calc(var(--boardsize)/4);
+    /* color: #ff37e1; */
+    color: white;
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    /* right: calc(var(--boardsize)*0.77); */
+    /* animation: BoardCoveranim 2s; */
+    /* animation: BoardCoveranim 2s; */
+    transition-duration: 2s;
+}
+
+#Frame2 .FlexBoard {
+    position: relative;
+    left : var(--padding);
+}
+
+#Frame2 .Flex1 {
+    position: relative;
+    left : var(--padding);
+}
+
+/* #Frame2 .Flex1 {
+    position: relative;
+    left : 115px;
+} */
+
+@keyframes SlideIn {
+    from{
+        font-size: var(--MinTitleTextSize);
+    }
+
+    to{
+        font-size: var(--MaxTitleTextSize);
+    }
+}
+
+/* -------Frame3------- */
+#Frame3 {
+    display: none;
+}
+
+#Frame3 .FlexBoard {
+    position: relative;
+    left : var(--padding);
+}
+
+#Frame3 .Flex1 {
+    position: relative;
+    left : var(--padding);
+}
+
+.FlexBoardsmall {
+    display: flex;
+    height: calc(var(--boardsizesmall) + var(--boardsizesmall)*8.5/50);
+    width: calc(var(--boardsizesmall) + var(--boardsizesmall)*8.5/50);
+    align-items: center;
+    justify-content: center;
+    /* background-color: #ffde4e; */
+}
+
+.boardsmall {
+    display: grid;
+    /* position:absolute; */
+    grid-template-columns: auto auto auto;
+    /* height: var(--boardsizesmall) ;
+    width: var(--boardsizesmall) ;
+    left: calc(var(--boardsizesmall)/50); */
+    justify-content: center;
+    align-items: center;
+    /* height: 500px;
+    width: 500px; */
+}
+
+
+
+.cellsmall{
+    display: flex;
+    height: calc(.33*var(--boardsizesmall));
+    width: calc(.33*var(--boardsizesmall));
+    background-color: rgb(0, 0, 0);
+    /* padding: 0.05*var(--boardsizesmall) 0.05*var(--boardsizesmall); */
+    /* margin: 0.05*var(--boardsizesmall) 0.05*var(--boardsizesmall); */
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    /* text-align: center;
+    vertical-align: center; */
+    border: 8px solid black;
+    color: #000000;
+    font-size: calc(.2*var(--boardsizesmall));
+    transition-duration: 1s;
+}
+
+.cellborderleftsmall{border-left: calc(var(--boardsizesmall)/50) solid var(--bordercolorsmall);}
+.cellborderrightsmall{border-right: calc(var(--boardsizesmall)/50) solid var(--bordercolorsmall);}
+.cellbordertopsmall{border-top: calc(var(--boardsizesmall)/50) solid var(--bordercolorsmall);}
+.cellborderbottomsmall{border-bottom: calc(var(--boardsizesmall)/50) solid var(--bordercolorsmall);}
+
+/* #Frame2 .board1{
+    left: 115px;
+    margin: 24px 24px;
+} */
+
+.boardcoversmall {
+    display: flex;
+    position: absolute;
+    height: calc(var(--boardsizesmall) + var(--boardsizesmall)*8.5/50);
+    width: calc(var(--boardsizesmall) + var(--boardsizesmall)*8.5/50);
+    background-color: #000000;
+    opacity: 1;
+    /* top: calc(var(--boardsizesmall)*2.5/50); */
+    font-size:calc(var(--boardsizesmall));
+    /* color: #ff37e1; */
+    color: white;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    /* right: calc(var(--boardsizesmall)*0.77); */
+    /* animation: BoardCoveranim 2s; */
+    /* animation: BoardCoveranim 2s; */
+    transition-duration: 1s;
+    /* transition-timing-function: ease-in; */
+}
+
+
+@keyframes TitleMini {
+    from{
+        font-size: var(--MaxTitleTextSize);
+    }
+
+    to{
+        font-size: var(--MinTitleTextSize);
+    }
+}
+
+@keyframes BoardCoveranim {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
